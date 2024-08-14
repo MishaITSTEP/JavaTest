@@ -17,7 +17,6 @@ public class Main {
 
         } catch (Exception e) {
             System.out.println("Помилка: " + e.getMessage());
-            ;
         } finally {
         }
     }
@@ -38,11 +37,14 @@ public class Main {
             preparedStatement.setString(3, abonent.getEmail());
             preparedStatement.setString(4, abonent.getPhoneNumber());
 
+
+
+
+
             if (preparedStatement.executeUpdate() > 0) System.out.println("Executed👍");
             preparedStatement.close();
         } catch (Exception e) {
             System.out.println("Помилка зяднання до БД!!!");
-            ;
         } finally {
             if (connection != null) connection.close();
         }
@@ -60,7 +62,6 @@ public class Main {
             System.out.println("Успішно створено таблицю Phonebook :)");
         } catch (Exception e) {
             System.out.println("Помилка зяднання до БД!!!");
-            ;
         } finally {
             if (connection != null) connection.close();
         }
